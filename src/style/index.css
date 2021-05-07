@@ -1,0 +1,11 @@
+input {
+  width: 100%;
+}
+input[name="description"] {
+  height: 200px;
+}
+.login {
+  background: #db9314;
+  width: 40%;
+  margin: auto;
+}
