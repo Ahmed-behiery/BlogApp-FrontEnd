@@ -3,10 +3,7 @@ import "../style/blogs.css";
 import axios from "axios";
 
 class MyFollowingPosts extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   state = {
     dataList: [],
     token: localStorage.getItem("token"),
@@ -38,7 +35,7 @@ class MyFollowingPosts extends React.Component {
 
   getDate = (date) => {
     const day = new Date(date);
-    var date =
+     date =
       day.toLocaleString("en-us", { month: "long" }) +
       " " +
       day.getDate() +
@@ -71,12 +68,13 @@ class MyFollowingPosts extends React.Component {
             <img
               className="post-image"
               src={`https://res.cloudinary.com/duk7mhud6/image/upload/v1620044795/${item.imageUrl}`}
+              alt="img"
             />
 
             <div className="post-content">
               <p className="post-header">
                 {" "}
-                <a href="#"> {item.title}</a>{" "}
+                <a href="/"> {item.title}</a>{" "}
               </p>
               <p className="post-text">{item.description}</p>
               <div className="author">
