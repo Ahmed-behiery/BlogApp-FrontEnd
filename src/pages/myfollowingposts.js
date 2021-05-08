@@ -12,7 +12,6 @@ class MyFollowingPosts extends React.Component {
   componentDidMount() {
     axios
       .get("https://blog-system-backend-app.herokuapp.com/user/following/posts", {
-        headers: {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + this.state.token,
@@ -21,7 +20,6 @@ class MyFollowingPosts extends React.Component {
             "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
             "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Z-Key",
           },
-        },
       })
       .then((res) => {
         for (var i = 0; i < res.data.length; i++) {
